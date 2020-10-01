@@ -1,4 +1,4 @@
-const myEmojis = ["👨‍💻", "⛷", "🍲"];
+const myEmojis = ["🥁", "🧘‍♀️", "🏝"];
 const emojiContainer = document.getElementById("emoji-container");
 const input = document.getElementById("emoji-input");
 const pushBtn = document.getElementById("push-btn");
@@ -32,4 +32,16 @@ unshiftBtn.addEventListener("click", function () {
     emojiContainer.innerHTML = "";
     renderEmoji();
   }
+});
+
+popBtn.addEventListener("click", function () {
+  myEmojis.pop();
+  emojiContainer.innerHTML = "";
+  renderEmoji();
+});
+
+shiftBtn.addEventListener("click", function () {
+  myEmojis.shift();
+  emojiContainer.innerHTML = "";
+  renderEmoji();
 });
