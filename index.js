@@ -10,5 +10,10 @@ for (let i = 0; i < myEmojis.length; i++) {
 }
 
 pushBtn.addEventListener("click", function () {
-  console.log(input.value);
+  if (input.value != "") {
+    myEmojis.push(input.value);
+    console.log(myEmojis);
+    input.value = "";
+    emojiContainer.textContent = myEmojis;
+  }
 });
